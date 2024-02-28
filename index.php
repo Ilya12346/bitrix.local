@@ -484,7 +484,7 @@ $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
         <div class="main-traditions__text">
           Производим и дистрибуцируем продукцию с&nbsp;1996&nbsp;года.
         </div>
-        <a class="main-traditions__button btn-hover_parent desktop" href="#">
+        <a class="main-traditions__button btn-hover_parent desktop" href="/about_company">
           <div class="btn-hover_circle"></div>
           <span>Больше о&nbsp;нас</span>
         </a>
@@ -733,7 +733,7 @@ array(
     </div>
   </div>
   <div class="main-filials__bottom" data-aos="fade-up" data-aos-duration="1500">
-    <a class="main-filials__card where-buy btn-hover_parent" href="#">
+    <a class="main-filials__card where-buy btn-hover_parent" href="/where_to_buy">
       <div class="main-filials__card-top">
         <div class="main-filials__card-title">где купить</div>
         <div class="main-filials__card-text">
@@ -1032,49 +1032,27 @@ array(
     </div>
   </div>
 </section>
+
+
+
+
+				
 <div class="popup-video" data-popup-fade="main-video">
-  <div class="popup-video__close" data-fade-close="main-video">
-    <div class="btn-hover_parent">
-      <div class="btn-hover_circle white"></div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewbox="0 0 24 24"
-        fill="none"
-      >
-        <path
-          d="M6.69678 6.69671L17.3034 17.3033"
-          stroke="#0068FF"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></path>
-        <path
-          d="M6.69662 17.3033L17.3032 6.69671"
-          stroke="#0068FF"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        ></path>
-      </svg>
-    </div>
-  </div>
-  <div class="popup-video__inner">
-    <div class="popup-video__video">
-      <video
-        class="zp-video"
-        controls="controls"
-        width="100%"
-        height="100%"
-        poster="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-production-popup-icecream.png"
-        preload="none"
-      >
-        <source src="<?php echo SITE_TEMPLATE_PATH ?>/assets/videos/video-zdor-product.mp4" />
-      </video>
-    </div>
-  </div>
-</div>
+					<div class="popup-video__close" data-fade-close="main-video">
+						<div class="btn-hover_parent">
+							<div class="btn-hover_circle white"></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+								<path d="M6.69678 6.69671L17.3034 17.3033" stroke="#0068FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M6.69662 17.3033L17.3032 6.69671" stroke="#0068FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+						</div>
+					</div>
+					<div class="popup-video__inner">
+						<div class="popup-video__video"><video class="zp-video" controls="controls" width="100%" height="100%" poster="./assets/images/about-production-popup-icecream.png" preload="none">
+								<source src="<?php echo SITE_TEMPLATE_PATH ?>/assets/videos/video-zdor-product.mp4">
+							</video></div>
+					</div>
+				</div>
+
 
 
 
