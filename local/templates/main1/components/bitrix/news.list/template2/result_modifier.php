@@ -14,6 +14,7 @@ $this->setFrameMode(true);
 
 foreach($arResult['ITEMS'] as $cell => $arElement)
 {
+
     if($arElement['PREVIEW_PICTURE']['ID']){
         $file = CFile::ResizeImageGet(
             $arElement['PREVIEW_PICTURE']['ID'],
@@ -23,6 +24,7 @@ foreach($arResult['ITEMS'] as $cell => $arElement)
         $arResult['ITEMS'][$cell]['PREVIEW_PICTURE']['HEIGHT'] = $file['height'];
         $arResult['ITEMS'][$cell]['PREVIEW_PICTURE']['SRC'] = $file['src'];
     }
+
     if($arElement['DETAIL_PICTURE']['ID']){
         $file = CFile::ResizeImageGet(
             $arElement['DETAIL_PICTURE']['ID'],
@@ -32,6 +34,7 @@ foreach($arResult['ITEMS'] as $cell => $arElement)
         $arResult['ITEMS'][$cell]['DETAIL_PICTURE']['HEIGHT'] = $file['height'];
         $arResult['ITEMS'][$cell]['DETAIL_PICTURE']['SRC'] = $file['src'];
     }
+    
 }
 
 
