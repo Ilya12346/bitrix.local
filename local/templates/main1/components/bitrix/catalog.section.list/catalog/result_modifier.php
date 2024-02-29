@@ -15,6 +15,12 @@ $i = 0;
 foreach($arResult['SECTIONS'] as $cell => $arElement)
 {
 
+
+		$color = CUserFieldEnum::GetList(array(), array('ID'=>$arElement['UF_COLOR']));
+		$color = $color->GetNext();
+		$arResult['SECTIONS'][$cell]['UF_COLOR'] = $color['VALUE'];
+
+
         $file = CFile::ResizeImageGet(
             $arElement['PICTURE']['ID'],
         array("width" => 1200, "height" => 1200),	BX_RESIZE_IMAGE_EXACT,

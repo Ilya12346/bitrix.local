@@ -147,7 +147,16 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 	  </picture>
 	</div>
 	<div class="main-catalog__item-row">
-	  <div class="main-catalog__item-title white">
+	  <div class="main-catalog__item-title 
+				<?php
+				 if($arItem['UF_COLOR'] =='white' ){
+					echo 'white';
+				 }
+				 else{
+					echo 'blue';
+				 }
+				 ?>
+				">
 		<?php echo $arItem['NAME']?>
 	</div>
 	</div>
@@ -178,7 +187,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 
 	<pre>
 	<?php 
-	// print_r($arResult['SECTIONS'][0]);
+	// print_r($arResult);
 			// print_r($arResult['SECTIONS'][0]['DETAIL_PICTURE']);
 
 	// 	$i = 0;
