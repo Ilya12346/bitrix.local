@@ -201,62 +201,52 @@ false
     <div class="main-traditions__row">
       <div class="main-traditions__col">
         <div class="main-traditions__text">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          Производим и дистрибуцируем продукцию с&nbsp;1996&nbsp;года.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          <?php
+          $APPLICATION->IncludeComponent("bitrix:main.include", "template1", Array(
+          "AREA_FILE_SHOW" => "file",	// Показывать включаемую область
+          "PATH" => SITE_TEMPLATE_PATH."/include/templ/main_page4.php",	// Путь к файлу области
+          ),
+          false
+          );
+          ?>
         </div>
         <a class="main-traditions__button btn-hover_parent desktop" href="/about_company">
           <div class="btn-hover_circle"></div>
-          <span>Больше о&nbsp;нас</span>
+          <span>
+          <?php
+    $APPLICATION->IncludeComponent("bitrix:main.include", "template1", Array(
+    "AREA_FILE_SHOW" => "file",	// Показывать включаемую область
+    "PATH" => SITE_TEMPLATE_PATH."/include/templ/main_page6.php",	// Путь к файлу области
+    ),
+    false
+    );
+?>
+          </span>
         </a>
       </div>
       <div class="main-traditions__col">
         <div class="main-traditions__text">
-          Соединив самое лучшее из&nbsp;прошлого и&nbsp;настоящего, добавив
-          сырье собственного производства, вложив свой труд и&nbsp;душу, мы
-          приготовили для вас вкусные и&nbsp;полезные блюда.
+          <?php
+          $APPLICATION->IncludeComponent("bitrix:main.include", "template1", Array(
+          "AREA_FILE_SHOW" => "file",	// Показывать включаемую область
+          "PATH" => SITE_TEMPLATE_PATH."/include/templ/main_page5.php",	// Путь к файлу области
+          ),
+          false
+          );
+          ?>
         </div>
         <a class="main-traditions__button btn-hover_parent mobile" href="/about_company/">
           <div class="btn-hover_circle"></div>
-          <span>Больше о&nbsp;нас</span>
+          <span>
+              <?php
+              $APPLICATION->IncludeComponent("bitrix:main.include", "template1", Array(
+              "AREA_FILE_SHOW" => "file",	// Показывать включаемую область
+              "PATH" => SITE_TEMPLATE_PATH."/include/templ/main_page6.php",	// Путь к файлу области
+              ),
+              false
+              );
+              ?>
+          </span>
         </a>
       </div>
     </div>
