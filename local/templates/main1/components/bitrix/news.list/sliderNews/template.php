@@ -11,6 +11,7 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
+
 ?>
 
 
@@ -18,7 +19,11 @@ $this->setFrameMode(true);
 
 
 
+<?php
 
+// $sectionId = CIBlockSection::GetList([], ['IBLOCK_ID' => 1, 'CODE' => 'sectionCode'])->Fetch()['ID'];
+// print_r($sectionId)
+?>
 
 
 
@@ -46,7 +51,6 @@ $this->setFrameMode(true);
 				</svg></div>
 		</div>
 	</div>
-
 
 
 
@@ -126,7 +130,7 @@ $this->setFrameMode(true);
 
 
 
-	<div class="main-news__bot"><a class="main-news__bot-button btn-hover_parent" href="#">
+	<div class="main-news__bot"><a class="main-news__bot-button btn-hover_parent" href="/news">
 			<div class="btn-hover_circle"></div><span>Все новости и акции</span>
 		</a>
 	</div>

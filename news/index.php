@@ -1,8 +1,83 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Новости и акции");
+$APPLICATION->SetTitle("Новости");
+?>
+<?
+$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"newsRasdel", 
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "#ID#",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "3",
+		"IBLOCK_TYPE" => "slider",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "20",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "Y",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_META_KEYWORDS" => "Y",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "DESC",
+		"SORT_ORDER2" => "ASC",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "newsRasdel"
+
+
+
+
+
+
+
+	),
+	false
+);
 ?>
 
+<?if(false):?>
 <section class="top-section">
 	<section class="news-content container">
 		<div class="breadcrumbs">
@@ -57,14 +132,18 @@ $APPLICATION->SetTitle("Новости и акции");
 			</div>
 		</div>
 		<div class="news-content__categories" data-aos="fade-up">
-			<div class="news-content__categories-wrapper"><a
+			<div class="news-content__categories-wrapper">
+				<a
 					class="news-content__categories-item active btn-hover_parent no-scale" href="#">
 					<div class="btn-hover_circle white"></div><span>Все</span>
-				</a><a class="news-content__categories-item btn-hover_parent no-scale" href="#">
+				</a>
+				<a class="news-content__categories-item btn-hover_parent no-scale" href="#">
 					<div class="btn-hover_circle white"></div><span>Новости компании</span>
-				</a><a class="news-content__categories-item btn-hover_parent no-scale" href="#">
+				</a>
+				<a class="news-content__categories-item btn-hover_parent no-scale" href="#">
 					<div class="btn-hover_circle white"></div><span>Акции</span>
-				</a><a class="news-content__categories-item btn-hover_parent no-scale" href="#">
+				</a>
+				<a class="news-content__categories-item btn-hover_parent no-scale" href="#">
 					<div class="btn-hover_circle white"></div><span>Выставки и конференции</span>
 				</a></div>
 		</div>
@@ -304,49 +383,38 @@ $APPLICATION->SetTitle("Новости и акции");
 		</div>
 	</div>
 </div>
-
- <?$APPLICATION->IncludeComponent(
-	"bitrix:news",
+<?endif;?>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
 	"",
 	Array(
-		"ADD_ELEMENT_CHAIN" => "N",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
-		"BROWSER_TITLE" => "-",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
-		"DETAIL_DISPLAY_TOP_PAGER" => "N",
-		"DETAIL_FIELD_CODE" => array("",""),
-		"DETAIL_PAGER_SHOW_ALL" => "Y",
-		"DETAIL_PAGER_TEMPLATE" => "",
-		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PROPERTY_CODE" => array("",""),
-		"DETAIL_SET_CANONICAL_URL" => "N",
+		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array("",""),
+		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "2",
-		"IBLOCK_TYPE" => "news",
+		"IBLOCK_ID" => "3",
+		"IBLOCK_TYPE" => "slider",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"LIST_FIELD_CODE" => array("",""),
-		"LIST_PROPERTY_CODE" => array("",""),
+		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
-		"META_DESCRIPTION" => "-",
-		"META_KEYWORDS" => "-",
 		"NEWS_COUNT" => "20",
 		"PAGER_BASE_LINK_ENABLE" => "N",
 		"PAGER_DESC_NUMBERING" => "N",
@@ -355,9 +423,14 @@ $APPLICATION->SetTitle("Новости и акции");
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_MODE" => "N",
+		"PROPERTY_CODE" => array("",""),
+		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_META_KEYWORDS" => "Y",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
 		"SHOW_404" => "N",
@@ -365,23 +438,11 @@ $APPLICATION->SetTitle("Новости и акции");
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"USE_CATEGORIES" => "N",
-		"USE_FILTER" => "N",
-		"USE_PERMISSIONS" => "N",
-		"USE_RATING" => "N",
-		"USE_RSS" => "N",
-		"USE_SEARCH" => "N",
-		"USE_SHARE" => "N",
-		"VARIABLE_ALIASES" => Array("ELEMENT_ID"=>"ELEMENT_ID","SECTION_ID"=>"SECTION_ID")
+		"STRICT_SECTION_CHECK" => "N"
 	)
 );?>
 
-<br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+<?php
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>
