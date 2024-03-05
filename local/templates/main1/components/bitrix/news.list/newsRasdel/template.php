@@ -88,7 +88,7 @@ $this->setFrameMode(true);
 				?>
 
 
-				<a class="news-card" href="#" id="<?= $this->GetEditAreaId($arItem['ID']); ?>" href="<?= $arItem["DETAIL_PAGE_URL"] ?>">
+				<a class="news-card" id="<?= $this->GetEditAreaId($arItem['ID']); ?>" href="<?= $arItem["DETAIL_PAGE_URL"] ?>">
 					<div class="news-card__top">
 						<div class="news-card__plug">
 							<?php
