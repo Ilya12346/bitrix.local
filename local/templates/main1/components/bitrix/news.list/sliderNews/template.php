@@ -12,6 +12,40 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
+
+$getiblock = CIBlockSection::GetList(
+	Array("SORT"=>"ASC"),
+	Array("IBLOCK_ID"=>$arParams['IBLOCK_ID'])
+ );
+
+ 
+  
+ while($sectionwhile = $getiblock->GetNext())
+{
+	$arS[] = $sectionwhile;
+}
+  
+ foreach($arS as $key1=>$arSec){  
+	// print_r($arS);
+	// print_r($arSec);
+	 
+	 foreach($arResult["ITEMS"] as $key2=>$arItem){
+	// print_r($arItem);
+		 
+		  if($arItem['IBLOCK_SECTION_ID'] == $arSec['ID']){
+			// $arResult['ITEMS'] =  $arItem;
+			$arResult['ITEMS'][$key2]['DETAIL_LIST'] =  $arSec;
+			
+			
+
+		  }
+	}
+ }
+
+
+
+
+
 ?>
 
 
@@ -19,11 +53,11 @@ $this->setFrameMode(true);
 
 
 
-<?php
 
-// $sectionId = CIBlockSection::GetList([], ['IBLOCK_ID' => 1, 'CODE' => 'sectionCode'])->Fetch()['ID'];
-// print_r($sectionId)
-?>
+
+
+
+
 
 
 
@@ -84,7 +118,9 @@ $this->setFrameMode(true);
 							<picture class="picture">
 								<img class="picture__img" src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>">
 							</picture>
-							<span class="main-news__card-plug">выставки и конференции</span>
+							<span class="main-news__card-plug">
+							<?=$arItem['DETAIL_LIST']['NAME']?>
+							</span>
 						</div>
 						<p class="main-news__card-date"><?=$arItem["DISPLAY_ACTIVE_FROM"]?></p>
 						<p class="main-news__card-title"><?=$arItem["NAME"]?></p>
@@ -130,7 +166,7 @@ $this->setFrameMode(true);
 
 
 
-	<div class="main-news__bot"><a class="main-news__bot-button btn-hover_parent" href="/news">
+	<div class="main-news__bot"><a class="main-news__bot-button btn-hover_parent" href="/news/?catalog=all">
 			<div class="btn-hover_circle"></div><span>Все новости и акции</span>
 		</a>
 	</div>

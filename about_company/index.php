@@ -16,7 +16,7 @@ $APPLICATION->SetTitle("О компании");
 					</div>
 					<div class="about-production__popup-img">
 						<picture class="picture">
-							<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-production-popup-icecream.webp"><img class="picture__img" src="assets/images/about-production-popup-icecream.png">
+							<img class="picture__img" src="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-production-popup-icecream.png">
 						</picture>
 					</div>
 					<div class="about-production__popup-desk">
@@ -42,7 +42,7 @@ $APPLICATION->SetTitle("О компании");
 					</div>
 					<div class="about-production__popup-img">
 						<picture class="picture">
-							<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-production-popup-cookies.webp"><img class="picture__img" src="assets/images/about-production-popup-cookies.png">
+							<img class="picture__img" src="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-production-popup-cookies.png">
 						</picture>
 					</div>
 					<div class="about-production__popup-desk">
@@ -231,7 +231,7 @@ $APPLICATION->SetTitle("О компании");
 										<path d="M-613.638 -687.707C-116.262 -646.643 929.464 -400.256 1017.26 944.605C1023.27 1039.12 909.641 1089.39 842.381 1022.13L-692.935 -512.829C-761.257 -580.798 -708.865 -695.495 -613.638 -687.707Z" fill="black"></path>
 									</g>
 								</svg></div>
-							<div class="main-traditions__video-video" data-aos="fade-up"><video src="assets/videos/zp_preview.mp4" loop muted playsinline autoplay></video></div>
+							<div class="main-traditions__video-video" data-aos="fade-up"><video  src="<?php echo SITE_TEMPLATE_PATH ?>/videos/zp_preview.mp4" loop muted playsinline autoplay></video></div>
 							<div class="main-traditions__video-button"><svg width="576" height="202" viewbox="0 0 576 202" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M36.408 72.16C26.568 72.16 18.04 68.9347 10.824 62.484C3.608 56.0333 0 47.1773 0 35.916C0 25.2013 3.49866 16.564 10.496 10.004C17.6027 3.33467 26.404 0 36.9 0C47.5053 0 56.3067 3.06134 63.304 9.18401L53.628 23.288C49.5827 19.8987 44.8813 18.204 39.524 18.204C34.604 18.204 30.504 19.844 27.224 23.124C23.944 26.2947 22.304 30.6133 22.304 36.08C22.304 41.5467 23.8893 45.8653 27.06 49.036C30.34 52.0973 34.3307 53.628 39.032 53.628C44.8267 53.628 49.9653 51.6053 54.448 47.56L65.272 61.008C60.8987 65.0533 56.5253 67.9507 52.152 69.7C47.888 71.34 42.64 72.16 36.408 72.16Z" fill="white"></path>
 									<path d="M148.792 1.968L154.368 69.864H129.112L127.964 49.856C127.854 49.2 127.745 48.1067 127.636 46.576C127.636 45.0453 127.636 43.8973 127.636 43.132C125.777 45.6467 123.973 47.9427 122.224 50.02L114.352 58.876H109.104L101.396 49.856C100.958 49.3093 100.138 48.3253 98.9356 46.904C97.7329 45.3733 96.8036 44.1707 96.1476 43.296L95.6556 49.692L94.1796 69.864H69.0876L75.4836 1.968H84.5036L105.004 24.436C107.081 26.732 109.322 29.3013 111.728 32.144C113.149 30.3947 115.39 27.88 118.452 24.6L139.772 1.968H148.792Z" fill="white"></path>
@@ -388,7 +388,7 @@ $APPLICATION->SetTitle("О компании");
 								<div class="about-production__card">
 									<div class="about-production__card-img">
 										<picture class="picture">
-											<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-production-img-milk.webp"><img class="picture__img" src="assets/images/about-production-img-milk.png">
+											<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-production-img-milk.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-production-img-milk.png">
 										</picture>
 									</div>
 									<div class="about-production__card-text">Используем высококачественное сырье: цельное кубанское молоко и вкуснейшие натуральные сливки.</div>
@@ -396,7 +396,7 @@ $APPLICATION->SetTitle("О компании");
 								<div class="about-production__card">
 									<div class="about-production__card-img">
 										<picture class="picture">
-											<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-production-img-zavod.webp"><img class="picture__img" src="assets/images/about-production-img-zavod.png">
+											<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-production-img-zavod.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-production-img-zavod.png">
 										</picture>
 									</div>
 									<div class="about-production__card-text">Производство оснащено современным, высокотехнологичным оборудованием.</div>
@@ -407,7 +407,7 @@ $APPLICATION->SetTitle("О компании");
 									<div class="about-production__item-container">
 										<div class="about-production__item-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-item-img-zavod.webp"><img class="picture__img" src="assets/images/about-item-img-zavod.png">
+												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-item-img-zavod.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-item-img-zavod.png">
 											</picture>
 										</div>
 									</div>
@@ -428,7 +428,7 @@ $APPLICATION->SetTitle("О компании");
 									<div class="about-production__item-container">
 										<div class="about-production__item-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-item-img-cookies.webp"><img class="picture__img" src="assets/images/about-item-img-cookies.png">
+												<img class="picture__img" src="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-item-img-cookies.png">
 											</picture>
 										</div>
 									</div>
@@ -459,28 +459,28 @@ $APPLICATION->SetTitle("О компании");
 						<div class="about-evaluate__item">
 							<div class="about-evaluate__item-img">
 								<picture class="picture">
-									<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-diplom1.webp"><img class="picture__img" src="assets/images/about-diplom1.png">
+									<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-diplom1.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-diplom1.png">
 								</picture>
 							</div>
 						</div>
 						<div class="about-evaluate__item">
 							<div class="about-evaluate__item-img">
 								<picture class="picture">
-									<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-diplom2.webp"><img class="picture__img" src="assets/images/about-diplom2.png">
+									<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-diplom2.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-diplom2.png">
 								</picture>
 							</div>
 						</div>
 						<div class="about-evaluate__item">
 							<div class="about-evaluate__item-img">
 								<picture class="picture">
-									<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-diplom-medal1.webp"><img class="picture__img" src="assets/images/about-diplom-medal1.png">
+									<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-diplom-medal1.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-diplom-medal1.png">
 								</picture>
 							</div>
 						</div>
 						<div class="about-evaluate__item">
 							<div class="about-evaluate__item-img">
 								<picture class="picture">
-									<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-diplom-medal2.webp"><img class="picture__img" src="assets/images/about-diplom-medal2.png">
+									<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-diplom-medal2.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-diplom-medal2.png">
 								</picture>
 							</div>
 						</div>
@@ -508,7 +508,7 @@ $APPLICATION->SetTitle("О компании");
 						<div class="about-support__rect" data-aos="fade-up">
 							<div class="about-support__rect-bg">
 								<picture class="picture">
-									<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-rect-bg-blue.webp"><img class="picture__img" src="assets/images/about-rect-bg-blue.png">
+									<img class="picture__img" src="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-rect-bg-blue.png">
 								</picture>
 							</div>
 							<div class="about-support__rect-box">
@@ -529,70 +529,70 @@ $APPLICATION->SetTitle("О компании");
 									<div class="swiper-slide">
 										<div class="about-support__slider-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/freezing-slider1.webp"><img class="picture__img" src="assets/images/freezing-slider1.png">
+												<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/freezing-slider1.png">
 											</picture>
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="about-support__slider-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/freezing-slider2.webp"><img class="picture__img" src="assets/images/freezing-slider2.png">
+												<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/freezing-slider2.png">
 											</picture>
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="about-support__slider-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/freezing-slider3.webp"><img class="picture__img" src="assets/images/freezing-slider3.png">
+												<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/freezing-slider3.png">
 											</picture>
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="about-support__slider-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/freezing-slider4.webp"><img class="picture__img" src="assets/images/freezing-slider4.png">
+												<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/freezing-slider4.png">
 											</picture>
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="about-support__slider-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/freezing-slider5.webp"><img class="picture__img" src="assets/images/freezing-slider5.png">
+												<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/freezing-slider5.png">
 											</picture>
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="about-support__slider-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/freezing-slider6.webp"><img class="picture__img" src="assets/images/freezing-slider6.png">
+												<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/freezing-slider6.png">
 											</picture>
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="about-support__slider-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/freezing-slider7.webp"><img class="picture__img" src="assets/images/freezing-slider7.png">
+												<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/freezing-slider7.png">
 											</picture>
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="about-support__slider-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/freezing-slider8.webp"><img class="picture__img" src="assets/images/freezing-slider8.png">
+												<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/freezing-slider8.png">
 											</picture>
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="about-support__slider-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/freezing-slider9.webp"><img class="picture__img" src="assets/images/freezing-slider9.png">
+												<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/freezing-slider9.png">
 											</picture>
 										</div>
 									</div>
 									<div class="swiper-slide">
 										<div class="about-support__slider-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/freezing-slider10.webp"><img class="picture__img" src="assets/images/freezing-slider10.png">
+												<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/freezing-slider10.png">
 											</picture>
 										</div>
 									</div>
@@ -655,12 +655,12 @@ $APPLICATION->SetTitle("О компании");
 						</a>
 						<div class="about-social__item">
 							<picture class="picture">
-								<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/social-support-box.webp"><img class="picture__img" src="assets/images/social-support-box.png">
+								<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/social-support-box.png">
 							</picture>
 						</div>
 						<div class="about-social__item">
 							<picture class="picture">
-								<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/social-support-kids.webp"><img class="picture__img" src="assets/images/social-support-kids.png">
+								<img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/social-support-kids.png">
 							</picture>
 						</div>
 						<div class="about-social__card white">
@@ -702,49 +702,49 @@ $APPLICATION->SetTitle("О компании");
 										<div class="swiper-slide">
 											<div class="about-history__img-item">
 												<picture class="picture">
-													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img1.webp"><img class="picture__img" src="assets/images/about-history-img1.png">
+													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img1.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-history-img1.png">
 												</picture>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="about-history__img-item">
 												<picture class="picture">
-													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img2.webp"><img class="picture__img" src="assets/images/about-history-img2.png">
+													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img2.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-history-img2.png">
 												</picture>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="about-history__img-item">
 												<picture class="picture">
-													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img3.webp"><img class="picture__img" src="assets/images/about-history-img3.png">
+													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img3.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-history-img3.png">
 												</picture>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="about-history__img-item">
 												<picture class="picture">
-													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img4.webp"><img class="picture__img" src="assets/images/about-history-img4.png">
+													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img4.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-history-img4.png">
 												</picture>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="about-history__img-item">
 												<picture class="picture">
-													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img5.webp"><img class="picture__img" src="assets/images/about-history-img5.png">
+													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img5.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-history-img5.png">
 												</picture>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="about-history__img-item">
 												<picture class="picture">
-													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img6.webp"><img class="picture__img" src="assets/images/about-history-img6.png">
+													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img6.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-history-img6.png">
 												</picture>
 											</div>
 										</div>
 										<div class="swiper-slide">
 											<div class="about-history__img-item">
 												<picture class="picture">
-													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img7.webp"><img class="picture__img" src="assets/images/about-history-img7.png">
+													<source type="image/webp" srcset="<?php echo SITE_TEMPLATE_PATH ?>/assets/images/about-history-img7.webp"><img class="picture__img"  src="<?php echo SITE_TEMPLATE_PATH ?>/images/about-history-img7.png">
 												</picture>
 											</div>
 										</div>
