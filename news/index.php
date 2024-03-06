@@ -18,7 +18,7 @@ $APPLICATION->SetTitle("Новости");
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
 		"COMPONENT_TEMPLATE" => "newsRasdel",
-		"DETAIL_URL" => "",
+		"DETAIL_URL" => "/news/#SECTION_CODE#/#ELEMENT_CODE#/",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",

@@ -409,7 +409,7 @@ $APPLICATION->IncludeComponent(
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"DETAIL_URL" => "#SECTION_CODE#/#CODE#/",
+		"DETAIL_URL" =>  "news/detail.php?ELEMENT_CODE=ELEMENT_CODE",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",
