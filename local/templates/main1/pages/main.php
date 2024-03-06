@@ -93,7 +93,7 @@ $APPLICATION->IncludeComponent(
 			2 => "",
 		),
 		"SHOW_PARENT_NAME" => "Y",
-		"TOP_DEPTH" => "2",
+		"TOP_DEPTH" => "1",
 		"VIEW_MODE" => "LINE",
 		"COMPONENT_TEMPLATE" => "catalog"
 	),

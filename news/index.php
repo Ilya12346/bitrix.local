@@ -65,13 +65,15 @@ $APPLICATION->SetTitle("Новости");
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
-);?> <?php require($_SERVER['DOCUMENT_ROOT']. SITE_TEMPLATE_PATH. "/pages/news.php"); ?> <br>
- <br>
- <br>
- <br>
- <br>
- <br>
- <br>
+);?> 
+<?php require($_SERVER['DOCUMENT_ROOT']. SITE_TEMPLATE_PATH. "/pages/news.php"); ?> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <?php
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
 ?>

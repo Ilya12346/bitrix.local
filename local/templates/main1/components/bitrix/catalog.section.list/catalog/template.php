@@ -11,7 +11,9 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
+echo '<pre>';
+// print_r($arResult);
+echo '</pre>';
 $arViewModeList = $arResult['VIEW_MODE_LIST'];
 
 $arViewStyles = array(
@@ -54,10 +56,6 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 >
   <div class="main-catalog__top" data-aos="fade-up" data-aos-duration="1500">
     <h2 class="main-catalog__title animation-title" data-splitting data-effect1>
-
-
-
-
       <?php
 		$APPLICATION->IncludeComponent("bitrix:main.include", "template1", Array(
 	"AREA_FILE_SHOW" => "file",	// Показывать включаемую область
