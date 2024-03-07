@@ -12,9 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-echo '<pre>';
-print_r($arParams);
-echo '</pre>';
+// echo '<pre>';
+// print_r($arParams);
+// echo '</pre>';
 
 
 ?>

@@ -1,12 +1,14 @@
 <?php
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("1С-Битрикс: Управление сайтом");
-?>СУКА <?php 
+?>
+<?php 
 // require($_SERVER['DOCUMENT_ROOT']. SITE_TEMPLATE_PATH. "/pages/main.php"); 
-?> <br>
- <br>
- <br>
- <br>
+?> 
+<br>
+<br>
+<br>
+<br>
  <?$APPLICATION->IncludeComponent(
 	"bitrix:news.detail", 
 	"newsDetail", 
