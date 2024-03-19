@@ -183,11 +183,7 @@ if (isset($urlArr[3])) {
 
 <?if( $whichPage == 3):?>
 
-<h1>aboba</h1>
-
-<?endif?>
-
-<?$APPLICATION->IncludeComponent("bitrix:news.detail", "catalogDetail", Array(
+	<?$APPLICATION->IncludeComponent("bitrix:news.detail", "catalogDetail", Array(
 	"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_TYPE" => "slider",	// Тип информационного блока (используется только для проверки)
 		"IBLOCK_ID" => "4",	// Код информационного блока
@@ -257,6 +253,10 @@ if (isset($urlArr[3])) {
 	),
 	false
 );?>
+
+<?endif?>
+
+
 
 
 <br>
