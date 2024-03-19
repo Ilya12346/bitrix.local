@@ -11,9 +11,9 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-echo '<pre>';
-// print_r($arResult);
-echo '</pre>';
+// echo '<pre>';
+// print_r($arResult['SECTIONS']);
+// echo '</pre>';
 $arViewModeList = $arResult['VIEW_MODE_LIST'];
 
 $arViewStyles = array(
@@ -63,7 +63,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 	),
 	false
 );
-											?>
+		?>
 
     </h2>
     <div class="title-rombs">
@@ -127,7 +127,7 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
 <? foreach ($arResult["SECTIONS"] as $arItem) : ?>
 
 
-<a class="main-catalog__item btn-hover_parent" href="#">
+<a class="main-catalog__item btn-hover_parent" href="<?= $arItem["SECTION_PAGE_URL"] ?>" >
 	<div class="main-catalog__item-bg desktop">
 	  <picture class="picture">
 		<img

@@ -2,10 +2,10 @@
 $arUrlRewrite=array (
   4 => 
   array (
-    'CONDITION' => '#^/catalog/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/#',
-    'RULE' => 'SECTION_CODE=$1&ELEMENT_CODE=$2',
+    'CONDITION' => '#^/catalog/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)//#',
+    'RULE' => 'SECTION_CODE=$1&CODE=$2',
     'ID' => '',
-    'PATH' => '/catalog/detail.php',
+    'PATH' => '/catalog/index.php',
     'SORT' => 100,
   ),
   2 => 
