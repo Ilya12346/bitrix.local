@@ -14,7 +14,7 @@ $this->setFrameMode(true);
 
 
 // echo '<pre>';
-// print_r($_REQUEST);
+// print_r($arResult);
 // echo '</pre>';
 
 
@@ -86,42 +86,20 @@ $this->setFrameMode(true);
 
 
     <div class="catalog-hero__thumbs">
-        <div class="catalog-hero__thumbs-item btn-hover_parent active">
-            <div class="btn-hover_circle"></div><span>Все</span>
-        </div>
-        <div class="catalog-hero__thumbs-item btn-hover_parent">
-            <div class="btn-hover_circle"></div><span>Вафельный стаканчик</span>
-        </div>
-        <div class="catalog-hero__thumbs-item btn-hover_parent">
-            <div class="btn-hover_circle"></div><span>Эскимо</span>
-        </div>
-        <div class="catalog-hero__thumbs-item btn-hover_parent">
-            <div class="btn-hover_circle"></div><span>Рожок</span>
-        </div>
-        <div class="catalog-hero__thumbs-item btn-hover_parent">
-            <div class="btn-hover_circle"></div><span>Брикет на вафлях</span>
-        </div>
-        <div class="catalog-hero__thumbs-item btn-hover_parent">
-            <div class="btn-hover_circle"></div><span>Фруктовый и пищевой лёд</span>
-        </div>
-        <div class="catalog-hero__thumbs-item btn-hover_parent">
-            <div class="btn-hover_circle"></div><span>Картонный стакан</span>
-        </div>
-        <div class="catalog-hero__thumbs-item btn-hover_parent">
-            <div class="btn-hover_circle"></div><span>Пластиковый стакан</span>
-        </div>
-        <div class="catalog-hero__thumbs-item btn-hover_parent">
-            <div class="btn-hover_circle"></div><span>Сэндвич</span>
-        </div>
-        <div class="catalog-hero__thumbs-item btn-hover_parent">
-            <div class="btn-hover_circle"></div><span>Семейное и ванночки</span>
-        </div>
-        <div class="catalog-hero__thumbs-item btn-hover_parent">
-            <div class="btn-hover_circle"></div><span>Весовое</span>
-        </div>
-        <div class="catalog-hero__thumbs-item btn-hover_parent">
-            <div class="btn-hover_circle"></div><span>Лакомка</span>
-        </div>
+
+
+<? foreach ($arResult['SECTIONS'] as $key => $item) : ?>
+        <a href="<?= $item['SECTION_PAGE_URL'] ?>" class="catalog-hero__thumbs-item btn-hover_parent
+        <? if ($arParams['PARENT_SECTION_CODE'] == $item['CODE']) : ?>active<? endif ?>">
+            <div class="btn-hover_circle"></div>
+            <span><?= $item['NAME'] ?></span>
+        </a>
+<? endforeach; ?>
+
+
+
+
+
     </div>
     <div class="catalog-hero__activity" data-aos="fade-up"><label class="catalog-hero__tops desktop" for="top"><input
                 class="catalog-hero__tops-input catalog-check-desktop" type="checkbox" name="top" id="top">

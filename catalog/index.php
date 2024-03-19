@@ -9,7 +9,7 @@ $APPLICATION->SetTitle("каталог");
 $i = 1;
 // pr($GLOBALS);
 // получаем получившийся юрл
-print_r($APPLICATION->GetCurDir());
+// print_r($APPLICATION->GetCurDir());
 
 
 
@@ -84,6 +84,11 @@ if (isset($urlArr[3])) {
 		"VIEW_MODE" => "LINE"
 	)
 );?> <?endif;?> 
+
+
+
+
+
 <?if( $whichPage == 2):?> 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
@@ -178,7 +183,8 @@ if (isset($urlArr[3])) {
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"ELEMENT_CODE" => "vafelnyy-stakanchik-karamelnaya-kosichka",
+		// "ELEMENT_CODE" => "vafelnyy-stakanchik-karamelnaya-kosichka",
+		"ELEMENT_CODE" => $urlArr[3],
 		"ELEMENT_ID" => "",
 		"FIELD_CODE" => array(0=>"",1=>"",),
 		"IBLOCK_ID" => "4",

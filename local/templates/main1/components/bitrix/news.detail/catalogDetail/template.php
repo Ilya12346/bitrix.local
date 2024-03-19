@@ -12,12 +12,12 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-// echo '<pre>';
+echo '<pre>';
 
 // print_r($arResult['PROPERTIES']);
 
 
-// echo '</pre>';
+echo '</pre>';
 
 
 ?>

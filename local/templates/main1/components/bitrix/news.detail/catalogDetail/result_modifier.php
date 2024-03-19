@@ -1,28 +1,12 @@
 <?php 
 
-
-$sectionInfo = [];
-
-$filter = [];
-$filter['IBLOCK_ID'] =  (int)$arResult['ID'];
-$filter['GLOBAL_ACTIVE'] =  'Y';
-$filter['SECTION_ID'] =  (int)$arResult['SECTION']['PATH'][0]['ID'];
-$filter['DEPTH_LEVEL'] =  2;
+$filter['ID'] = 45;
 
 $getiblock = CIBlockSection::GetList(
-    ['SORT' => 'ASC'],
+    // ['SORT' => 'ASC'],
     $filter
 );
-$arResult['SECTIONS'][] = $arResult['SECTION']['PATH'][0];
-$arResult['SECTIONS'][0]['NAME'] = 'Все';
-while ($sectionwhile = $getiblock->GetNext()) {
-    $arResult['SECTIONS'][] = $sectionwhile;
-//     $sectionInfo[$sectionwhile['ID']] = $sectionwhile['NAME'];
-}
 
-
-
-// $arResult["SECTION_NAMES"] = $sectionInfo;
 
 
 echo '</br>';
@@ -45,7 +29,7 @@ echo '</br>';
 echo '</br>';
 echo '</br>';
 echo '<pre>';
-// print_r($getiblock->GetNext());
+print_r($getiblock->GetNext());
 // print_r($getiblock->GetNext());
 // print_r($getiblock->GetNext());
 // print_r($getiblock->GetNext());
@@ -66,7 +50,14 @@ echo '<pre>';
 // print_r($getiblock->GetNext());
 // print_r($getiblock->GetNext());
 // print_r($arResult);
-// print_r($arResult['SECTIONS']);
+// print_r($arResult);
 echo '</pre>';
 
+// $res = CIBlockElement::GetByID(45);
+// if($ar_res = $res->GetNext()){
+// 	echo $ar_res['NAME'];
+// }
+// if($ar_res = $res->GetNext()){
+// 	echo $ar_res['NAME'];
+// }
 ?>
