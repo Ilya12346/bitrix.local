@@ -1,6 +1,6 @@
 <?
 
-$sSectionName = "Главная";
+$sSectionName = "главная";
 
 
 ?>

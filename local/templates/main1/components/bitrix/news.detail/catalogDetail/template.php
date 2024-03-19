@@ -12,100 +12,15 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-echo '<pre>';
+// echo '<pre>';
 
-print_r($arResult['PROPERTIES']);
+// print_r($arResult['PROPERTIES']);
 
 
-echo '</pre>';
+// echo '</pre>';
 
 
 ?>
-<div class="news-detail">
-	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
-		<img
-			class="detail_picture"
-			border="0"
-			src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>"
-			width="<?=$arResult["DETAIL_PICTURE"]["WIDTH"]?>"
-			height="<?=$arResult["DETAIL_PICTURE"]["HEIGHT"]?>"
-			alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
-			title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
-			/>
-	<?endif?>
-	<?if($arParams["DISPLAY_DATE"]!="N" && $arResult["DISPLAY_ACTIVE_FROM"]):?>
-		<span class="news-date-time"><?=$arResult["DISPLAY_ACTIVE_FROM"]?></span>
-	<?endif;?>
-	<?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
-		<h3><?=$arResult["NAME"]?></h3>
-	<?endif;?>
-	<?if($arParams["DISPLAY_PREVIEW_TEXT"]!="N" && ($arResult["FIELDS"]["PREVIEW_TEXT"] ?? '') !== ''):?>
-		<p><?=$arResult["FIELDS"]["PREVIEW_TEXT"];unset($arResult["FIELDS"]["PREVIEW_TEXT"]);?></p>
-	<?endif;?>
-	<?if($arResult["NAV_RESULT"]):?>
-		<?if($arParams["DISPLAY_TOP_PAGER"]):?><?=$arResult["NAV_STRING"]?><br /><?endif;?>
-		<?echo $arResult["NAV_TEXT"];?>
-		<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?><br /><?=$arResult["NAV_STRING"]?><?endif;?>
-	<?elseif($arResult["DETAIL_TEXT"] <> ''):?>
-		<?echo $arResult["DETAIL_TEXT"];?>
-	<?else:?>
-		<?echo $arResult["PREVIEW_TEXT"];?>
-	<?endif?>
-	<div style="clear:both"></div>
-	<br />
-	<?foreach($arResult["FIELDS"] as $code=>$value):
-		if ('PREVIEW_PICTURE' == $code || 'DETAIL_PICTURE' == $code)
-		{
-			?><?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?
-			if (!empty($value) && is_array($value))
-			{
-				?><img border="0" src="<?=$value["SRC"]?>" width="<?=$value["WIDTH"]?>" height="<?=$value["HEIGHT"]?>"><?
-			}
-		}
-		else
-		{
-			?><?=GetMessage("IBLOCK_FIELD_".$code)?>:&nbsp;<?=$value;?><?
-		}
-		?><br />
-	<?endforeach;
-	foreach($arResult["DISPLAY_PROPERTIES"] as $pid=>$arProperty):?>
-
-		<?=$arProperty["NAME"]?>:&nbsp;
-		<?if(is_array($arProperty["DISPLAY_VALUE"])):?>
-			<?=implode("&nbsp;/&nbsp;", $arProperty["DISPLAY_VALUE"]);?>
-		<?else:?>
-			<?=$arProperty["DISPLAY_VALUE"];?>
-		<?endif?>
-		<br />
-	<?endforeach;
-	if(array_key_exists("USE_SHARE", $arParams) && $arParams["USE_SHARE"] == "Y")
-	{
-		?>
-		<div class="news-detail-share">
-			<noindex>
-			<?
-			$APPLICATION->IncludeComponent("bitrix:main.share", "", array(
-					"HANDLERS" => $arParams["SHARE_HANDLERS"],
-					"PAGE_URL" => $arResult["~DETAIL_PAGE_URL"],
-					"PAGE_TITLE" => $arResult["~NAME"],
-					"SHORTEN_URL_LOGIN" => $arParams["SHARE_SHORTEN_URL_LOGIN"],
-					"SHORTEN_URL_KEY" => $arParams["SHARE_SHORTEN_URL_KEY"],
-					"HIDE" => $arParams["SHARE_HIDE"],
-				),
-				$component,
-				array("HIDE_ICONS" => "Y")
-			);
-			?>
-			</noindex>
-		</div>
-		<?
-	}
-	?>
-</div>
-
-
-
-
 <div class="popup-video" data-popup-fade="recipec-video">
 					<div class="popup-video__close" data-fade-close="main-video">
 						<div class="btn-hover_parent">
@@ -123,25 +38,19 @@ echo '</pre>';
 				</div>
 				<section class="catalog-detail top-section container">
 					<div class="catalog-detail__breadcrumbs mobile">
-						<div class="breadcrumbs">
-							<div class="breadcrumbs-wrapper">
-								<div class="breadcrumbs-wrapper__row"><a class="breadcrumbs__item" href="#">главная</a>
-									<div class="breadcrumbs__arrow"><svg width="9" height="14" viewbox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.501732 0.71693C0.688798 2.76241 1.82258 7.06302 8.00226 7.42407C8.43495 7.44882 8.66756 6.9815 8.3585 6.70488L1.3053 0.390819C0.992979 0.109838 0.465946 0.325304 0.501732 0.71693Z" fill="#F64653"></path>
-											<path d="M0.501732 13.2839C0.688798 11.2384 1.82258 6.9378 8.00226 6.57675C8.43495 6.552 8.66756 7.01934 8.3585 7.29595L1.3053 13.61C0.992979 13.8895 0.465946 13.6755 0.501732 13.2839Z" fill="#F64653"></path>
-										</svg></div><a class="breadcrumbs__item" href="#">каталог</a>
-									<div class="breadcrumbs__arrow"><svg width="9" height="14" viewbox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.501732 0.71693C0.688798 2.76241 1.82258 7.06302 8.00226 7.42407C8.43495 7.44882 8.66756 6.9815 8.3585 6.70488L1.3053 0.390819C0.992979 0.109838 0.465946 0.325304 0.501732 0.71693Z" fill="#F64653"></path>
-											<path d="M0.501732 13.2839C0.688798 11.2384 1.82258 6.9378 8.00226 6.57675C8.43495 6.552 8.66756 7.01934 8.3585 7.29595L1.3053 13.61C0.992979 13.8895 0.465946 13.6755 0.501732 13.2839Z" fill="#F64653"></path>
-										</svg></div><a class="breadcrumbs__item" href="#">мороженое</a>
-									<div class="breadcrumbs__arrow"><svg width="9" height="14" viewbox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M0.501732 0.71693C0.688798 2.76241 1.82258 7.06302 8.00226 7.42407C8.43495 7.44882 8.66756 6.9815 8.3585 6.70488L1.3053 0.390819C0.992979 0.109838 0.465946 0.325304 0.501732 0.71693Z" fill="#F64653"></path>
-											<path d="M0.501732 13.2839C0.688798 11.2384 1.82258 6.9378 8.00226 6.57675C8.43495 6.552 8.66756 7.01934 8.3585 7.29595L1.3053 13.61C0.992979 13.8895 0.465946 13.6755 0.501732 13.2839Z" fill="#F64653"></path>
-										</svg></div>
-									<div class="breadcrumbs__current active">Варежка</div>
-								</div>
-							</div>
-						</div>
+					<?php
+					$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb", 
+	"breadcrumbNews", 
+	array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0",
+		"COMPONENT_TEMPLATE" => "breadcrumbNews"
+	),
+	false
+);
+?>
 					</div>
 					<div class="catalog-detail__inner">
 						<div class="catalog-detail__col slider">
@@ -258,27 +167,19 @@ echo '</pre>';
 						</div>
 						<div class="catalog-detail__col info" data-aos="fade-up">
 							<div class="catalog-detail__breadcrumbs desktop">
-								<div class="breadcrumbs">
-									<div class="breadcrumbs-wrapper">
-										<div class="breadcrumbs-wrapper__row"><a class="breadcrumbs__item" href="#">главная</a>
-											<div class="breadcrumbs__arrow"><svg width="9" height="14" viewbox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M0.501732 0.71693C0.688798 2.76241 1.82258 7.06302 8.00226 7.42407C8.43495 7.44882 8.66756 6.9815 8.3585 6.70488L1.3053 0.390819C0.992979 0.109838 0.465946 0.325304 0.501732 0.71693Z" fill="#F64653"></path>
-													<path d="M0.501732 13.2839C0.688798 11.2384 1.82258 6.9378 8.00226 6.57675C8.43495 6.552 8.66756 7.01934 8.3585 7.29595L1.3053 13.61C0.992979 13.8895 0.465946 13.6755 0.501732 13.2839Z" fill="#F64653"></path>
-												</svg></div><a class="breadcrumbs__item" href="#">каталог</a>
-											<div class="breadcrumbs__arrow"><svg width="9" height="14" viewbox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M0.501732 0.71693C0.688798 2.76241 1.82258 7.06302 8.00226 7.42407C8.43495 7.44882 8.66756 6.9815 8.3585 6.70488L1.3053 0.390819C0.992979 0.109838 0.465946 0.325304 0.501732 0.71693Z" fill="#F64653"></path>
-													<path d="M0.501732 13.2839C0.688798 11.2384 1.82258 6.9378 8.00226 6.57675C8.43495 6.552 8.66756 7.01934 8.3585 7.29595L1.3053 13.61C0.992979 13.8895 0.465946 13.6755 0.501732 13.2839Z" fill="#F64653"></path>
-												</svg></div><a class="breadcrumbs__item" href="#">мороженое</a>
-											<div class="breadcrumbs__arrow"><svg width="9" height="14" viewbox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M0.501732 0.71693C0.688798 2.76241 1.82258 7.06302 8.00226 7.42407C8.43495 7.44882 8.66756 6.9815 8.3585 6.70488L1.3053 0.390819C0.992979 0.109838 0.465946 0.325304 0.501732 0.71693Z" fill="#F64653"></path>
-													<path d="M0.501732 13.2839C0.688798 11.2384 1.82258 6.9378 8.00226 6.57675C8.43495 6.552 8.66756 7.01934 8.3585 7.29595L1.3053 13.61C0.992979 13.8895 0.465946 13.6755 0.501732 13.2839Z" fill="#F64653"></path>
-												</svg></div>
-											<div class="breadcrumbs__current active">
-												Варежка
-											</div>
-										</div>
-									</div>
-								</div>
+								<?php
+								$APPLICATION->IncludeComponent(
+								"bitrix:breadcrumb", 
+								"breadcrumbNews", 
+								array(
+								"PATH" => "",
+								"SITE_ID" => "s1",
+								"START_FROM" => "0",
+								"COMPONENT_TEMPLATE" => "breadcrumbNews"
+								),
+								false
+								);
+								?>
 							</div><span class="catalog-detail__brandmark">Здоровые Продукты</span>
 							<div class="catalog-detail__title"><?=$arResult["SECTION"]["PATH"][1]['NAME']?></div>
 							<div class="catalog-detail__desk">
@@ -351,7 +252,7 @@ echo '</pre>';
 															<path d="M4.58505 10.9704C5.00547 9.17667 5.21568 8.27978 5.71035 7.61412C6.12854 7.0514 6.68728 6.60847 7.33058 6.32973C8.09156 6 9.01275 6 10.8551 6H13.1449C14.9872 6 15.9084 6 16.6694 6.32973C17.3127 6.60847 17.8715 7.0514 18.2896 7.61412C18.7843 8.27978 18.9945 9.17667 19.4149 10.9704L20.1462 14.0905C20.7859 16.8199 21.1058 18.1846 20.7522 19.2548C20.4553 20.1533 19.8496 20.9175 19.0425 21.4115C18.0812 22 16.6795 22 13.8761 22H10.1239C7.32049 22 5.91879 22 4.9575 21.4115C4.15044 20.9175 3.54466 20.1533 3.24781 19.2548C2.89423 18.1846 3.21409 16.8199 3.8538 14.0904L4.58505 10.9704Z" fill="#0068FF"></path>
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M12 6.5C12.8284 6.5 13.5 5.82843 13.5 5C13.5 4.17157 12.8284 3.5 12 3.5C11.1716 3.5 10.5 4.17157 10.5 5C10.5 5.82843 11.1716 6.5 12 6.5ZM12 8C13.6569 8 15 6.65685 15 5C15 3.34315 13.6569 2 12 2C10.3431 2 9 3.34315 9 5C9 6.65685 10.3431 8 12 8Z" fill="#0068FF"></path>
 														</svg></div>
-													<div class="catalog-card__plug-text">90 г</div>
+													<div class="catalog-card__plug-text"><?=$arResult['PROPERTIES']["gram"]['VALUE']?> г</div>
 													<div class="catalog-card__plug-info"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
 															<rect x="0.5" y="0.5" width="23" height="23" rx="5.5" fill="white"></rect>
 															<path d="M12.75 11C12.75 10.5858 12.4142 10.25 12 10.25C11.5858 10.25 11.25 10.5858 11.25 11V17C11.25 17.4142 11.5858 17.75 12 17.75C12.4142 17.75 12.75 17.4142 12.75 17V11Z" fill="#0068FF"></path>
@@ -366,7 +267,7 @@ echo '</pre>';
 															<path d="M12 21.61V12.54" stroke="#EAF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 															<path d="M16.9998 13.2401V9.58014L7.50977 4.1001" stroke="#EAF3FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
 														</svg></div>
-													<div class="catalog-card__plug-text">28 шт</div>
+													<div class="catalog-card__plug-text"><?=$arResult['PROPERTIES']["in_box"]['VALUE']?> шт</div>
 													<div class="catalog-card__plug-info"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
 															<rect x="0.5" y="0.5" width="23" height="23" rx="5.5" fill="white"></rect>
 															<path d="M12.75 11C12.75 10.5858 12.4142 10.25 12 10.25C11.5858 10.25 11.25 10.5858 11.25 11V17C11.25 17.4142 11.5858 17.75 12 17.75C12.4142 17.75 12.75 17.4142 12.75 17V11Z" fill="#0068FF"></path>
@@ -391,7 +292,7 @@ echo '</pre>';
 																</clippath>
 															</defs>
 														</svg></div>
-													<div class="catalog-card__plug-text">50 шт</div>
+													<div class="catalog-card__plug-text"><?=$arResult['PROPERTIES']["in_poddon"]['VALUE']?> шт</div>
 													<div class="catalog-card__plug-info"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
 															<rect x="0.5" y="0.5" width="23" height="23" rx="5.5" fill="white"></rect>
 															<path d="M12.75 11C12.75 10.5858 12.4142 10.25 12 10.25C11.5858 10.25 11.25 10.5858 11.25 11V17C11.25 17.4142 11.5858 17.75 12 17.75C12.4142 17.75 12.75 17.4142 12.75 17V11Z" fill="#0068FF"></path>
@@ -414,11 +315,11 @@ echo '</pre>';
 										<div class="ac-catalog__save">
 											<div class="ac-catalog__save-item">
 												<div class="ac-catalog__save-title">Срок годности</div>
-												<div class="ac-catalog__save-text">120 суток</div>
+												<div class="ac-catalog__save-text"><?=$arResult['PROPERTIES']["expiration_date"]['VALUE']?> суток</div>
 											</div>
 											<div class="ac-catalog__save-item">
 												<div class="ac-catalog__save-title">Температура не выше</div>
-												<div class="ac-catalog__save-text">-18 °C</div>
+												<div class="ac-catalog__save-text"><?=$arResult['PROPERTIES']["temperature_no_more"]['VALUE']?> °C</div>
 											</div>
 										</div>
 									</div>
@@ -431,7 +332,9 @@ echo '</pre>';
 										</div>
 									</div>
 									<div class="ac-panel ac-catalog__bot">
-										<div class="ac-catalog__text">Вода питьевая, сливки пастеризованные, молоко цельное сгущенное с сахаром, сахар, вафельный стаканчик, сухое цельное молоко, глазурь «Шоколадная» с растительным жиром, сливочное масло, ядра арахиса обжаренные (дробленые), сухое обезжиренное молоко, патока, комплексная пищевая добавка, ароматизатор ванилин.<br>Массовая доля жира 12 %.</div>
+										<div class="ac-catalog__text">
+											<?=$arResult['PROPERTIES']["compound"]['VALUE']['TEXT']?>
+										</div>
 									</div>
 								</div>
 								<div class="ac ac-vacancies ac-catalog">
@@ -445,19 +348,19 @@ echo '</pre>';
 										<div class="ac-catalog__goods">
 											<div class="ac-catalog__goods-item">
 												<div class="ac-catalog__goods-title">Белки</div>
-												<div class="ac-catalog__goods-text">4,5 г</div>
+												<div class="ac-catalog__goods-text"><?=$arResult['PROPERTIES']["beloc"]['VALUE']?></div>
 											</div>
 											<div class="ac-catalog__goods-item">
 												<div class="ac-catalog__goods-title">Жиры</div>
-												<div class="ac-catalog__goods-text">16,5 г</div>
+												<div class="ac-catalog__goods-text"><?=$arResult['PROPERTIES']["fats"]['VALUE']?></div>
 											</div>
 											<div class="ac-catalog__goods-item">
 												<div class="ac-catalog__goods-title">Углеводы</div>
-												<div class="ac-catalog__goods-text">24,5 г</div>
+												<div class="ac-catalog__goods-text"><?=$arResult['PROPERTIES']["carbohydrates"]['VALUE']?></div>
 											</div>
 											<div class="ac-catalog__goods-item">
 												<div class="ac-catalog__goods-title">Энергетическая ценность</div>
-												<div class="ac-catalog__goods-text">1100 кДж/ 264 ккал</div>
+												<div class="ac-catalog__goods-text"><?=$arResult['PROPERTIES']["energy_value"]['VALUE']?></div>
 											</div>
 										</div>
 									</div>
