@@ -180,7 +180,9 @@ echo '</pre>';
 								false
 								);
 								?>
-							</div><span class="catalog-detail__brandmark">Здоровые Продукты</span>
+							</div><span class="catalog-detail__brandmark">
+								<?=$arResult['PROPERTIES']['brend']['name_brend']?>
+							</span>
 							<div class="catalog-detail__title"><?=$arResult["SECTION"]["PATH"][1]['NAME']?></div>
 							<div class="catalog-detail__desk">
 
