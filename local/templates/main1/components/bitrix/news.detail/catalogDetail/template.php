@@ -12,12 +12,12 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-echo '<pre>';
+// echo '<pre>';
 
-// print_r($arResult['PROPERTIES']);
+// print_r($arResult);
 
 
-echo '</pre>';
+// echo '</pre>';
 
 
 ?>
@@ -39,18 +39,18 @@ echo '</pre>';
 				<section class="catalog-detail top-section container">
 					<div class="catalog-detail__breadcrumbs mobile">
 					<?php
-					$APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	"breadcrumbNews", 
-	array(
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0",
-		"COMPONENT_TEMPLATE" => "breadcrumbNews"
-	),
-	false
-);
-?>
+						$APPLICATION->IncludeComponent(
+						"bitrix:breadcrumb", 
+						"breadcrumbNews", 
+						array(
+						"PATH" => "",
+						"SITE_ID" => "s1",
+						"START_FROM" => "0",
+						"COMPONENT_TEMPLATE" => "breadcrumbNews"
+						),
+						false
+						);
+						?>
 					</div>
 					<div class="catalog-detail__inner">
 						<div class="catalog-detail__col slider">
@@ -58,27 +58,15 @@ echo '</pre>';
 								<div class="recipes-detail__gallery-left">
 									<div class="swiper gallery-thumbs-catalog">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="catalog-detail__thumb-img">
-													<picture class="picture">
-														<img class="picture__img" src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>">
-													</picture>
+											<?php foreach ($arResult['PROPERTIES']['gallery']['src_images'] as $item) : ?>
+												<div class="swiper-slide">
+													<div class="catalog-detail__thumb-img">
+														<picture class="picture">
+															<img class="picture__img" src="<?=$item['src']?>">
+														</picture>
+													</div>
 												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="catalog-detail__thumb-img">
-													<picture class="picture">
-														<img class="picture__img" src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>">
-													</picture>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="catalog-detail__thumb-img">
-													<picture class="picture">
-														<img class="picture__img" src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>">
-													</picture>
-												</div>
-											</div>
+											<?php endforeach; ?>
 										</div>
 									</div>
 								</div>
@@ -139,27 +127,15 @@ echo '</pre>';
 									</div>
 									<div class="swiper swiper-gallery-catalog">
 										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="catalog-detail__img">
-													<picture class="picture">
-														<img class="picture__img" src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>">
-													</picture>
+											<?php foreach ($arResult['PROPERTIES']['gallery']['src_images'] as $item) : ?>
+												<div class="swiper-slide">
+													<div class="catalog-detail__img">
+														<picture class="picture">
+															<img class="picture__img" src="<?=$item['src']?>">
+														</picture>
+													</div>
 												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="catalog-detail__img">
-													<picture class="picture">
-														<img class="picture__img" src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>">
-													</picture>
-												</div>
-											</div>
-											<div class="swiper-slide">
-												<div class="catalog-detail__img">
-													<picture class="picture">
-														<img class="picture__img" src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>">
-													</picture>
-												</div>
-											</div>
+											<?php endforeach; ?>
 										</div>
 									</div>
 								</div>
@@ -395,7 +371,8 @@ echo '</pre>';
 										</div>
 									</form>
 								</div>
-							</div><a class="catalog-detail__rect btn-hover_parent" href="#">
+							</div>
+							<a class="catalog-detail__rect btn-hover_parent" href="<?=$arResult['PROPERTIES']["next_element"]["next_element"]['DETAIL_PAGE_URL']?>">
 								<div class="catalog-detail__rect-circle">
 									<div class="catalog-hero__rec-circle">
 										<div class="button button-arrow_right btn-hover_parent">
@@ -411,12 +388,14 @@ echo '</pre>';
 								<div class="catalog-detail__rect-inner">
 									<div class="catalog-detail__rect-texts">
 										<div class="catalog-detail__rect-title">следующий продукт</div>
-										<div class="catalog-detail__rect-desk">Сёмыч</div>
+										<div class="catalog-detail__rect-desk">
+										<?=$arResult['PROPERTIES']["next_element"]["next_element"]['NAME']?>
+										</div>
 									</div>
 									<div class="catalog-detail__rect-box">
 										<div class="catalog-detail__rect-img">
 											<picture class="picture">
-												<source type="image/webp" srcset="assets/images/catalog-detail-next1.webp"><img class="picture__img" src="assets/images/catalog-detail-next1.png">
+												<img class="picture__img" src="<?=$arResult['PROPERTIES']["next_element"]['image']['src']?>">
 											</picture>
 										</div>
 									</div>
