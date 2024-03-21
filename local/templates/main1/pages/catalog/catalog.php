@@ -54,32 +54,12 @@ $arrFilter = [];
 
 $arrFilter = [
     '=SECTION_CODE' => $urlArr[2],
-    "PROPERTY_15_VALUE"=>"Нет"
+	"PROPERTY_is_it_cool_VALUE" => "Нет"
 ];
-$tr = 'false';
 if (isset($_GET['top']) && $_GET['top'] == 'true') {
-	$tr = 'true';
-    $arrFilter = [
-        '=SECTION_CODE' => $urlArr[2],
-        "PROPERTY_15_VALUE"=>"Да"
-    ];
+    $arrFilter["PROPERTY_is_it_cool_VALUE"] = "Да";
 }
 ?>
-
-<script>
-    document.getElementById('labelTop').addEventListener('click', function() {
-        const form = document.getElementById('formTop');
-        const checkbox = document.getElementById('valueForm');
-        console.log('jkljkl');
-        if (checkbox.value === 'false') {
-            checkbox.value = 'true'; // Устанавливаем новое значение
-        } 
-        else {
-            checkbox.value = 'false'; // Устанавливаем новое значение
-        }
-        form.submit();
-    });
- </script> 
 
 <?if( $whichPage == 1):?> <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section.list",
@@ -139,7 +119,7 @@ if (isset($_GET['top']) && $_GET['top'] == 'true') {
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"FIELD_CODE" => array(
-			0 => "",
+			0 => "SHOW_COUNTER",
 			1 => "",
 		),
 		"FILTER_NAME" => "arrFilter",

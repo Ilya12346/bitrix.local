@@ -115,13 +115,7 @@ $urlArr = array_filter(
     <div class="catalog-hero__activity" data-aos="fade-up">
         <form action="/catalog/<?=$urlArr[2]?>/" method="get" id='formTop'>
         <label id='labelTop'  class="catalog-hero__tops desktop" for="top">
-            <input value="<?php 
-            if($_GET['top'] == 'true'){
-                echo 'true';
-            } else {
-                echo 'false';
-            }
-            ?>" 
+            <input value="true" 
 
             <?php 
             if($_GET['top'] == 'true'){
