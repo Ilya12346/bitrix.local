@@ -8,6 +8,10 @@ $asset->addCss(SITE_TEMPLATE_PATH."/app.css");
 
 $asset->addJs(SITE_TEMPLATE_PATH."/assets/vendor.js");
 $asset->addJs(SITE_TEMPLATE_PATH."/assets/app.js");
+$asset->addJs(SITE_TEMPLATE_PATH."/assets/app.js");
 
 $asset->addString('<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">');
+$asset->addString('<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" ></script>');
+
+
 

@@ -23,6 +23,17 @@ $this->setFrameMode(true);
 //     return $elem != '';
 // });
 // print_r($arrUrl);
+$urlArr = array_filter(
+	// делим все по слешу в массив
+	explode('/', $APPLICATION->GetCurDir()),
+	function ($item) {
+    	return $item != '';
+	}
+);
+
+
+
+
 
 ?>
 
@@ -98,11 +109,29 @@ $this->setFrameMode(true);
 
 
 
-
+<!-- \local\templates\main1\components\bitrix\news.list\catalog_ice_cream\template.php -->
 
     </div>
-    <div class="catalog-hero__activity" data-aos="fade-up"><label class="catalog-hero__tops desktop" for="top"><input
-                class="catalog-hero__tops-input catalog-check-desktop" type="checkbox" name="top" id="top">
+    <div class="catalog-hero__activity" data-aos="fade-up">
+        <form action="/catalog/<?=$urlArr[2]?>/" method="get" id='formTop'>
+        <label id='labelTop'  class="catalog-hero__tops desktop" for="top">
+            <input value="<?php 
+            if($_GET['top'] == 'true'){
+                echo 'true';
+            } else {
+                echo 'false';
+            }
+            ?>" 
+
+            <?php 
+            if($_GET['top'] == 'true'){
+                echo 'checked';
+            } else {
+                // echo 'false';
+            }
+            ?>
+
+                class="catalog-hero__tops-input catalog-check-desktop" type="checkbox" name="top" id="valueForm" >
             <div class="catalog-hero__tops-box"><svg class="mark-svg" xmlns="http://www.w3.org/2000/svg" width="14"
                     height="10" viewbox="0 0 14 10" fill="none">
                     <path d="M1 5L5 9L13 1" stroke="white" stroke-width="2" stroke-linecap="round"
@@ -125,6 +154,7 @@ $this->setFrameMode(true);
                 </svg></div>
             <div class="catalog-hero__tops-text">Топ продаж</div>
         </label>
+        </form>
         <div class="catalog-hero__selects">
             <div class="catalog-hero__select desktop">
                 <div class="select-wrapper">

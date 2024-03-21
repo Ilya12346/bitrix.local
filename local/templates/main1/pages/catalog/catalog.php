@@ -38,15 +38,50 @@ if (isset($urlArr[3])) {
 }
 
 
+global $arrFilter;
+$arrFilter = [];
+// $arrFilter['=SECTION_CODE'] = 'morozhenoe';
 
 
+// $arrFilter = [
+// 	// '=SECTION_CODE' => 'lakomka',
+// 	'=SECTION_CODE' => $urlArr[2],
+//     // "=PROPERTY_is_it_new" => "code_value_for_yes",
+// 	// "PROPERTY_is_it_cool"=> 'Да'
+// 	// "PROPERTY_15_VALUE"=>"Да"
+// 	"PROPERTY_15_VALUE"=>"Да"
+// ];
 
+$arrFilter = [
+    '=SECTION_CODE' => $urlArr[2],
+    "PROPERTY_15_VALUE"=>"Нет"
+];
+$tr = 'false';
+if (isset($_GET['top']) && $_GET['top'] == 'true') {
+	$tr = 'true';
+    $arrFilter = [
+        '=SECTION_CODE' => $urlArr[2],
+        "PROPERTY_15_VALUE"=>"Да"
+    ];
+}
+?>
 
+<script>
+    document.getElementById('labelTop').addEventListener('click', function() {
+        const form = document.getElementById('formTop');
+        const checkbox = document.getElementById('valueForm');
+        console.log('jkljkl');
+        if (checkbox.value === 'false') {
+            checkbox.value = 'true'; // Устанавливаем новое значение
+        } 
+        else {
+            checkbox.value = 'false'; // Устанавливаем новое значение
+        }
+        form.submit();
+    });
+ </script> 
 
-
-
-
-?><?if( $whichPage == 1):?> <?$APPLICATION->IncludeComponent(
+<?if( $whichPage == 1):?> <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section.list",
 	"catalog",
 	Array(
@@ -107,7 +142,7 @@ if (isset($urlArr[3])) {
 			0 => "",
 			1 => "",
 		),
-		"FILTER_NAME" => "",
+		"FILTER_NAME" => "arrFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "4",
 		"IBLOCK_TYPE" => "slider",
@@ -147,7 +182,8 @@ if (isset($urlArr[3])) {
 		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
-);?> <?endif?> 
+);?> 
+<?endif?> 
 <?if( $whichPage == 3):?> <?$APPLICATION->IncludeComponent(
 	"bitrix:news.detail",
 	"catalogDetail",
